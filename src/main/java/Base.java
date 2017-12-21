@@ -71,7 +71,11 @@ public class Base {
                     text.getText2();
                     division.setB(scanner.nextDouble());
                     // Округляем переменную d до 4х знаков после запятой
-                    division.getResultOfDivision();
+                    try {
+                        division.getResultOfDivision();
+                    } catch (Exception e){
+                        System.out.println("На ноль делить нельзя" + e.getMessage());
+                    }
                     scanner.close();
                     break;
 
