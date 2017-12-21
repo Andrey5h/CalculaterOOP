@@ -9,4 +9,9 @@ public class Division extends FieldsOfCalculater {
     public double getDivision() {
         return getA() / getB();
     }
+
+    public double getResultOfDivision(){
+        System.out.printf("Result = %.4f", getDivision());
+        return 0;
+    }
 }

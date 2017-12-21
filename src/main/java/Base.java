@@ -5,16 +5,14 @@
  * Modifications: Translate inferred  Russian text on English
  */
 
-import Calculater.Difference;
-import Calculater.Division;
-import Calculater.Multiply;
-import Calculater.Sum;
+import Calculater.*;
 
 import java.util.Scanner;
 
 public class Base {
     public static void main(String[] args) {
         Sum sum = new Sum();
+        TextOfField text = new TextOfField();
         Difference difference = new Difference();
         Multiply multiply = new Multiply();
         Division division = new Division();
@@ -30,50 +28,50 @@ public class Base {
             switch (choose) {
                 case 1:
                     System.out.println("You choose the Amount!");
-                    System.out.println("Enter the number #1");
+                    text.getText1();
                     // Водим первое число
                     sum.setA(scanner.nextDouble());
                     // Водим второе число
-                    System.out.println("Enter the number #2");
+                    text.getText2();
                     sum.setB(scanner.nextDouble());
                     // Округляем переменную d до 4х знаков после запятой
-                    System.out.printf("Result = %.4f", sum.getSum());
+                    sum.getResultOfSum();
                     scanner.close();
                     break;
                 case 2:
                     System.out.println("You chose the Difference!");
-                    System.out.println("Enter the number #1");
+                    text.getText1();
                     // Водим первое число
                     difference.setA(scanner.nextDouble());
                     // Водим второе число
-                    System.out.println("Enter the number #2");
+                    text.getText2();
                     difference.setB(scanner.nextDouble());
                     // Округляем переменную d до 4х знаков после запятой
-                    System.out.printf("Result = %.4f", difference.getDifference());
+                    difference.getResultOfDifference();
                     scanner.close();
                     break;
                 case 3:
                     System.out.println("You have chosen Multiplication!");
-                    System.out.println("Enter the number #1");
+                    text.getText1();
                     // Водим первое число
                     multiply.setA(scanner.nextDouble());
                     // Водим второе число
-                    System.out.println("Enter the number #2");
+                    text.getText2();
                     multiply.setB(scanner.nextDouble());
                     // Округляем переменную d до 4х знаков после запятой
-                    System.out.printf("Result = %.4f", multiply.getMultiply());
+                    multiply.getResultOfMultiply();
                     scanner.close();
                     break;
                 case 4:
                     System.out.println("You chose Division!");
-                    System.out.println("Enter the number #1");
+                    text.getText1();
                     // Водим первое число
-                  division.setA(scanner.nextDouble());
+                    division.setA(scanner.nextDouble());
                     // Водим второе число
-                    System.out.println("Enter the number #2");
+                    text.getText2();
                     division.setB(scanner.nextDouble());
                     // Округляем переменную d до 4х знаков после запятой
-                    System.out.printf("Result = %.4f", division.getDivision());
+                    division.getResultOfDivision();
                     scanner.close();
                     break;
 

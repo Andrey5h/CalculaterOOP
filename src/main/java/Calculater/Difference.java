@@ -12,4 +12,9 @@ public class Difference extends FieldsOfCalculater {
     public double getDifference() {
         return getA() - getB();
     }
+
+    public double getResultOfDifference(){
+        System.out.printf("Result = %.4f", getDifference());
+        return 0;
+    }
 }

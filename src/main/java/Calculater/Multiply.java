@@ -9,4 +9,8 @@ public class Multiply extends FieldsOfCalculater {
     public double getMultiply() {
         return getA() * getB();
     }
+    public double getResultOfMultiply(){
+        System.out.printf("Result = %.4f", getMultiply());
+        return 0;
+    }
 }

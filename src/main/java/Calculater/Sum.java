@@ -8,4 +8,8 @@ public class Sum extends FieldsOfCalculater {
     public double getSum(){
         return getA() + getB();
     }
+    public double getResultOfSum(){
+        System.out.printf("Result = %.4f", getSum());
+        return 0;
+    }
 }
